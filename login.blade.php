@@ -1,35 +1,45 @@
-@extends('layouts.main')
+@extends('admin.layouts.main') 
 @push('title')
-    <title>Vendor -login</title>
+    <title>admin -login</title>
 @endpush
-@section('content')
-<div class="container-fluid bg-light p-5">
-    <h1 class="text-center"><i class="fa-solid fa-user"></i> User Login</h1>
+   @section('content') 
+   
+<section>
+    <div class="container-fluid bg-light p-5">
+    <h1 class="text-center"><i class="fa-solid fa-user"></i> Admin Login</h1>
 </div>
-
 <div class="container">
     <div class="row">
-        <div class="col-lg-10">
+        <div class="col-lg-12">
             <div class="row">
                 <div class="col-lg-6">
-                    <img src="{{asset ('assets/images/product/userimg.avif') }}" class="mb-5 w-100 rounded-3 img-fluid">
+                    <img src="{{asset ('assets/images/product/admin.jpg') }}" class="mb-5 rounded-2 img-fluid" style="height: 350px; width: 100%;">
                 </div>
                 <div class="col-lg-6">
-                    <form action="#">
-                        <form>
-                            <div class="mb-3">
-                              <label class="form-label">Please enter your mobile number</label>
-                              <input type="email" class="form-control" placeholder="+91">
-                            </div>
-                            <a href="{{url('/login1')}}" type="btn" class="btn theme-orange-btn text-light form-control">Request OTP</a>
-                            <div class="text-center p-5 my-5">Don't have an account?
-                                <a href="{{url('/registration')}}" class="text-decoration-none"> Signup</a>
-                            </div>
-                          </form>
+                   
+                        <form action="#">
+                            <div class="row">
+                            
+                            <div class="col-lg-12 col-sm-12">
+                                <label class="form-label">Username:</label>
+                                <input type="tel" class="form-control" placeholder="Dilshad Alam ">
+                              </div>
+                              
+                              <div class="col-lg-12 col-sm-12">
+                                <label class="form-label">Password:</label>
+                                <input type="password" class="form-control" placeholder="******">
+                              </div>
+                              
+                              <div class="col-lg-12 col-sm-12 mt-3">
+                                <a href="#" type="btn" class="btn btn-primary text-light form-control">Login</a>
+                              </div>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+</section> 
+
 @endsection
